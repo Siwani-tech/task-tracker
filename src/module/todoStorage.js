@@ -3,19 +3,24 @@
 let todos = [];
 
 const addTodo = (title, description, dueDate) => {
+  console.log('Adding todo:', title, description, dueDate)
   const newTodo = {
     title,
     description,
     dueDate,
-    id: Date.now(), // You can use a library like uuid for more reliable IDs
+    id: Date.now(), 
   };
+  console.log('New todo object:', newTodo);
+
   todos.push(newTodo);
   saveTodosToLocalStorage();
+  return newTodo;
 };
 
 const deleteTodo = (id) => {
   todos = todos.filter((todo) => todo.id !== id);
   saveTodosToLocalStorage();
+   
 };
 
 const getTodos = () => {
