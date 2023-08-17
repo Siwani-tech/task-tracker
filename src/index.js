@@ -1,3 +1,4 @@
+import '../dist/css/style.css';
 import createForm from './module/form';
 import setupFormValidation from './module/render';
 import { getTodos, loadTodosFromLocalStorage } from './module/todoStorage';
